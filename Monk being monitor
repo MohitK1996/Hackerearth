@@ -1,0 +1,13 @@
+t = int(input())
+for _ in range(t):
+    n = input()
+    h = list(map(int, input().split()))
+    h.sort()
+    hset=set(h)
+    l=[]
+    for i in hset:
+        l.append(h.count(i))
+    out=max(l)-min(l)
+    if out==0:
+        out= -1
+    print(out)
